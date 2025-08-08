@@ -5,37 +5,128 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Portafolio Hernandez</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <style>
+    html {
+      scroll-snap-type: y mandatory;
+    }
+    section.snap {
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+    .progress {
+      position: fixed;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: #a855f7;
+      bottom: 50px;
+      transform: scaleX(0);
+      transform-origin: left;
+      z-index: 50;
+    }
+    section h2.scroll-anim {
+      position: relative;
+      font-size: 3rem;
+      font-weight: bold;
+    }
+  </style>
 </head>
-<body class="bg-cover bg-top min-h-screen text-white" style="background-image: url(img/background.jpg);">
-  <header>
-    <nav class="fixed top-4 left-1/2 transform -translate-x-1/2">
-      <div class="flex items-center gap-4 px-3 py-2 bg-white/10 backdrop-blur-md rounded-full shadow-lg border border-white/20 text-sm text-white">
-        <a href="/index.html" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Inicio</a>
-        <a href="/pages/projects.html" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Proyectos</a>
-        <a href="#" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Tecnologias</a>
-        <a href="#" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Sobre Mi</a>
-        <a href="#" class="text-base ml-2 px-4 py-2 bg-white/20 hover:bg-white/30 rounded-full shadow-inner backdrop-blur-lg transition">
-          Contactame!
-        </a>
+
+<body class="text-white bg-black">
+  <!-- Barra de progreso -->
+  <div class="progress"></div>
+
+  <!-- NAV -->
+  <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+    <div class="flex items-center gap-4 px-3 py-2 bg-white/10 backdrop-blur-md rounded-full shadow-lg border border-white/20 text-sm text-white">
+      <a href="#hero" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Inicio</a>
+      <a href="#proyectos" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Proyectos</a>
+      <a href="#tecnologias" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Tecnologías</a>
+      <a href="#sobre-mi" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Sobre Mi</a>
+      <a href="#contacto" class="text-base ml-2 px-4 py-2 bg-white/20 hover:bg-white/30 rounded-full shadow-inner backdrop-blur-lg transition">
+        Contactame!
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="snap bg-cover bg-fixed bg-top" style="background-image: url('img/background.webp');">
+    <div class="flex justify-around items-center w-full">
+      <div class="flex flex-col justify-center gap-4">
+        <h1 class="text-8xl font-extrabold scroll-anim animate__animated animate__bounceInLeft">¡Hola! Soy Facundo</h1>
+        <p class="text-4xl mt-4">Desarrollador Full Stack</p>
+        <button class="mt-8 flex justify-start">
+          <a href="#proyectos" class="text-xl px-6 py-3 bg-purple-600 rounded-full hover:bg-purple-700 transition">Ver Proyectos</a>
+        </button>
       </div>
-    </nav>
-    <section class="flex items-center justify-center pt-30 gap-28">
-      <div class="flex flex-col items-center justify-center">
-        <h1 class="text-6xl font-extrabold leading-tight text-white text-center"> Hola! Soy Facundo!</h1>
-        <h2 class="text-2xl text-white mt-9"> Desarrollador Full Stack VOS CONFIA Y PONE LA PLATONA!</h2>
+      <div class="p-1 rounded-2xl bg-gradient-to-tr from-purple-800 via-indigo-600 to-cyan-400">
+        <img src="/img/perfil.jpg" alt=""
+        class="rounded-2xl max-w-sm">
       </div>
-      <div>
-       <img src="img/perfil.jpg" alt="fotoPerfil" class="mt-9 w-80 h-80 rounded-full shadow-2xl object-cover border-4 border-white/20 transition-transform duration-300 hover:scale-105">
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="snap">
+    <h2 class="scroll-anim">Proyectos</h2>
+    <div class="grid gap-8 md:grid-cols-3 mt-10 px-6">
+      <div class="bg-white/10 p-4 rounded-xl backdrop-blur-md hover:scale-105 transition">
+        <img src="img/proyecto1.jpg" alt="Proyecto 1" class="rounded-lg aspect-video object-cover">
+        <h3 class="mt-4 text-xl font-semibold">Portfolio Web</h3>
       </div>
-    </section>
-    
-  </header>
+    </div>
+  </section>
 
-  <main>
+  <!-- TECNOLOGÍAS -->
+  <section id="tecnologias" class="snap bg-gray-900">
+    <h2 class="scroll-anim">Tecnologías</h2>
+    <div class="flex justify-center gap-6 flex-wrap mt-10">
+      <span class="px-4 py-2 bg-white/10 rounded-full">HTML</span>
+      <span class="px-4 py-2 bg-white/10 rounded-full">CSS</span>
+      <span class="px-4 py-2 bg-white/10 rounded-full">JavaScript</span>
+      <span class="px-4 py-2 bg-white/10 rounded-full">React</span>
+      <span class="px-4 py-2 bg-white/10 rounded-full">Node.js</span>
+    </div>
+  </section>
 
-  </main>
+  <!-- SOBRE MÍ -->
+  <section id="sobre-mi" class="snap">
+    <h2 class="scroll-anim">Sobre mí</h2>
+    <p class="max-w-3xl mx-auto text-lg text-center mt-6">
+      Soy desarrollador Full Stack con pasión por crear aplicaciones rápidas, escalables y visualmente atractivas.
+    </p>
+  </section>
 
-  <footer></footer>
+  <!-- CONTACTO -->
+  <section id="contacto" class="snap bg-gray-900">
+    <h2 class="scroll-anim">Contacto</h2>
+    <div class="flex justify-center gap-6 mt-10">
+      <a href="#" class="px-6 py-3 bg-purple-600 rounded-full hover:bg-purple-700 transition">Email</a>
+      <a href="#" target="_blank" class="px-6 py-3 bg-white/10 rounded-full hover:bg-white/20 transition">GitHub</a>
+      <a href="#" target="_blank" class="px-6 py-3 bg-white/10 rounded-full hover:bg-white/20 transition">LinkedIn</a>
+    </div>
+  </section>
 
+  <script type="module">
+    import { animate, scroll } from "https://cdn.jsdelivr.net/npm/motion@12.23.12/+esm"
+
+    // Barra de progreso
+    scroll(animate(".progress", { scaleX: [0, 1] }, { ease: "linear" }))
+
+    document.querySelectorAll(".scroll-anim").forEach((header) => {
+      scroll(animate(header, { y: [-200, 200] }, { ease: "linear" }), {
+        target: header,
+      })
+    })
+  </script>
 </body>
 </html>
