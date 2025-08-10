@@ -39,100 +39,184 @@
       font-size: 3rem;
       font-weight: bold;
     }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+    .animate-float-slow { animation: float 6s ease-in-out infinite; }
+    .animate-float-medium { animation: float 4s ease-in-out infinite; }
+    .animate-float-fast { animation: float 3s ease-in-out infinite; }
   </style>
 </head>
 
 <body class="text-white bg-black">
   <!-- Barra de progreso -->
   <div class="progress"></div>
+  <header>
+      <!-- NAV -->
+      <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+        <div class="flex items-center gap-4 px-3 py-2 bg-white/10 backdrop-blur-md rounded-full shadow-lg border border-white/20 text-sm text-white">
+          <a href="#hero" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Inicio</a>
+          <a href="#proyectos" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Proyectos</a>
+          <a href="#tecnologias" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Tecnologías</a>
+          <a href="#sobre-mi" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Sobre Mi</a>
+          <a href="#contacto" class="text-base ml-2 px-4 py-2 bg-white/20 hover:bg-white/30 rounded-full shadow-inner backdrop-blur-lg transition">
+            Contactame!
+          </a>
+        </div>
+      </nav>
 
-  <!-- NAV -->
-  <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-    <div class="flex items-center gap-4 px-3 py-2 bg-white/10 backdrop-blur-md rounded-full shadow-lg border border-white/20 text-sm text-white">
-      <a href="#hero" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Inicio</a>
-      <a href="#proyectos" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Proyectos</a>
-      <a href="#tecnologias" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Tecnologías</a>
-      <a href="#sobre-mi" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Sobre Mi</a>
-      <a href="#contacto" class="text-base ml-2 px-4 py-2 bg-white/20 hover:bg-white/30 rounded-full shadow-inner backdrop-blur-lg transition">
-        Contactame!
-      </a>
+   <!-- HERO -->
+    <section id="hero" class="snap relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-purple-900 via-indigo-800 to-cyan-700">
+
+      <!-- Overlay sutil -->
+      <div class="absolute inset-0 bg-black/40 backdrop-blur-sm z-0"></div>
+
+      <!-- Iconos flotantes -->
+      <div class="absolute top-10 left-10 text-orange-400 text-5xl animate-float-slow drop-shadow-lg">🚀</div>
+      <div class="absolute bottom-16 left-14 text-purple-400 text-5xl animate-float-medium drop-shadow-lg">&lt;/&gt;</div> <!-- Para q no lo tome como texto-->
+      <div class="absolute top-12 right-12 text-indigo-400 text-5xl animate-float-fast drop-shadow-lg">🤖</div>
+      <div class="absolute bottom-20 right-16 text-yellow-400 text-5xl animate-float-medium drop-shadow-lg">{ }</div>
+
+      <!-- Contenido -->
+      <div class="relative z-10 flex flex-col md:flex-row items-center justify-center gap-12 px-6">
+
+        <!-- Texto -->
+        <div class="flex flex-col justify-center max-w-xl text-center md:text-left">
+          <h1 class="text-6xl md:text-8xl font-extrabold leading-tight text-white drop-shadow-lg animate__animated animate__bounceInLeft">
+            ¡Hola! Soy <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 bg-clip-text text-transparent">Facundo</span>
+          </h1>
+          <p class="text-xl md:text-2xl mt-4 text-gray-200">Apasionado por el desarrollo y aprender cada día</p>
+          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <a href="#proyectos" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full hover:opacity-90 transition text-lg text-white shadow-lg shadow-purple-500/40">
+              Ver Proyectos
+            </a>
+            <a href="#" target="_blank" class="px-6 py-3 bg-white/10 border border-white/20 rounded-full hover:bg-white/20 transition text-lg text-white">
+              Descargar CV
+            </a>
+          </div>
+        </div>
+
+        <!-- Imagen -->
+        <div class="relative p-1 rounded-[2rem] bg-gradient-to-tr from-purple-800 via-indigo-600 to-cyan-400 shadow-lg shadow-purple-500/50 hover:scale-105 transition">
+          <img src="img/perfil.webp" alt="Foto de perfil" class="rounded-[2rem] max-w-xs md:max-w-sm shadow-lg shadow-black/40">
+          <div class="absolute inset-0 rounded-[2rem] border border-white/20 pointer-events-none"></div>
+        </div>
+
+      </div>
+    </section>
+
+  </header>
+
+  <main>
+    <!-- PROYECTOS -->
+    <section id="proyectos" class="snap relative z-10">
+      <h2 class="scroll-anim">Proyectos</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-11 mx-auto">
+
+        <div class="bg-white/10 p-4 rounded-xl backdrop-blur-md hover:scale-105 transition max-w-xs mx-auto">
+          <a href="https://github.com/ffacuhernandez/tp3-flexbox-clon-hernandez">
+            <img src="img/proyecto1.webp" alt="Proyecto 1" class="cursor-pointer rounded-lg object-cover h-36 w-full">
+          <h3 class="mt-4 text-xl font-semibold text-center">Equipo Trabajo</h3>
+          </a>
+        </div>
+        <div class="bg-white/10 p-4 rounded-xl backdrop-blur-md hover:scale-105 transition max-w-xs mx-auto">
+          <a href="https://github.com/ffacuhernandez/menu-digital">
+                      <img src="img/proyecto2.webp" alt="Proyecto 2" class="cursor-pointer rounded-lg object-cover h-36 w-full">
+          <h3 class="mt-4 text-xl font-semibold text-center">Restaurant</h3>
+          </a>
+        </div>
+        <div class="bg-white/10 p-4 rounded-xl backdrop-blur-md hover:scale-105 transition max-w-xs mx-auto">
+          <a href="https://github.com/ffacuhernandez/tarjeta-presentacion">
+            <img src="img/proyecto3.webp" alt="Proyecto 3" class="cursor-pointer rounded-lg object-cover h-36 w-full">
+            <h3 class="mt-4 text-xl font-semibold text-center">Presentacion</h3>
+          </a>
+        </div>
+        <div class="bg-white/10 p-4 rounded-xl backdrop-blur-md hover:scale-105 transition max-w-xs mx-auto">
+          <a href="https://github.com/ffacuhernandez/Paper-Please">
+            <img src="img/proyecto4.webp" alt="Proyecto 4" class="cursor-pointer rounded-lg object-cover h-36 w-full">
+            <h3 class="mt-4 text-xl font-semibold text-center">Juego Argenzuela</h3>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TECNOLOGÍAS -->
+<section id="tecnologias" class="relative z-10 snap py-16">
+  <h2 class="scroll-anim text-center text-4xl font-bold text-white">Tecnologías</h2>
+
+  <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
+    
+    <!-- HTML -->
+    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+      <img src="img/html5.svg" alt="HTML" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+      <h3 class="text-xl font-semibold text-white">HTML5</h3>
+      <p class="mt-2 text-white/80 text-sm">Dominio avanzado en estructura semántica y optimización web. Proyectos disponibles en mi <a href="https://github.com/tuusuario" class="text-blue-400 hover:underline">GitHub</a>.</p>
     </div>
-  </nav>
 
-  <!-- HERO -->
-  <section id="hero" class="snap bg-cover bg-fixed bg-top" style="background-image: url('img/background.webp');">
-    <div class="flex justify-around items-center w-full">
-
-      <div class="flex flex-col justify-center gap-4">
-        <h1 class="text-8xl font-extrabold scroll-anim animate__animated animate__bounceInLeft">¡Hola! Soy Facundo</h1>
-        <p class="text-4xl mt-4">Desarrollador Full Stack</p>
-        <button class="mt-8 flex justify-start">
-          <a href="#proyectos" class="text-xl px-6 py-3 bg-purple-600 rounded-full hover:bg-purple-700 transition">Ver Proyectos</a>
-        </button>
-      </div>
-      <div class="p-1 rounded-2xl bg-gradient-to-tr from-purple-800 via-indigo-600 to-cyan-400">
-        <img src="img/perfil.webp" alt=""
-        class="rounded-2xl max-w-sm">
-      </div>
-
+    <!-- CSS -->
+    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+      <img src="img/css.svg" alt="CSS" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+      <h3 class="text-xl font-semibold text-white">CSS3</h3>
+      <p class="mt-2 text-white/80 text-sm">Estilos modernos, animaciones y responsive design. Uso extensivo en interfaces limpias y adaptables.</p>
     </div>
-  </section>
 
-  <!-- PROYECTOS -->
-  <section id="proyectos" class="snap">
-    <h2 class="scroll-anim">Proyectos</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 px-6 max-w-5xl mx-auto">
-
-      <div class="bg-white/10 p-4 rounded-xl backdrop-blur-md hover:scale-105 transition max-w-xs mx-auto">
-        <img src="img/proyecto1.webp" alt="Proyecto 1" class="rounded-lg object-cover h-36 w-full">
-        <h3 class="mt-4 text-xl font-semibold text-center">Equipo Trabajo</h3>
-      </div>
-      <div class="bg-white/10 p-4 rounded-xl backdrop-blur-md hover:scale-105 transition max-w-xs mx-auto">
-        <img src="img/proyecto2.webp" alt="Proyecto 2" class="rounded-lg object-cover h-36 w-full">
-        <h3 class="mt-4 text-xl font-semibold text-center">Restaurant</h3>
-      </div>
-      <div class="bg-white/10 p-4 rounded-xl backdrop-blur-md hover:scale-105 transition max-w-xs mx-auto">
-        <img src="img/proyecto3.webp" alt="Proyecto 3" class="rounded-lg object-cover h-36 w-full">
-        <h3 class="mt-4 text-xl font-semibold text-center">Presentacion</h3>
-      </div>
-      <div class="bg-white/10 p-4 rounded-xl backdrop-blur-md hover:scale-105 transition max-w-xs mx-auto">
-        <img src="img/proyecto4.webp" alt="Proyecto 4" class="rounded-lg object-cover h-36 w-full">
-        <h3 class="mt-4 text-xl font-semibold text-center">Juego Argenzuela</h3>
-      </div>
-
+    <!-- JavaScript -->
+    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+      <img src="img/javascript.svg" alt="JavaScript" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+      <h3 class="text-xl font-semibold text-white">JavaScript</h3>
+      <p class="mt-2 text-white/80 text-sm">Interactividad y lógica de cliente, integrando APIs y funciones dinámicas en proyectos web.</p>
     </div>
-  </section>
 
-  <!-- TECNOLOGÍAS -->
-  <section id="tecnologias" class="snap bg-gray-900">
-    <h2 class="scroll-anim">Tecnologías</h2>
-    <div class="flex justify-center gap-6 flex-wrap mt-10">
-      <span class="px-4 py-2 bg-white/10 rounded-full">HTML</span>
-      <span class="px-4 py-2 bg-white/10 rounded-full">CSS</span>
-      <span class="px-4 py-2 bg-white/10 rounded-full">JavaScript</span>
-      <span class="px-4 py-2 bg-white/10 rounded-full">React</span>
-      <span class="px-4 py-2 bg-white/10 rounded-full">Node.js</span>
+    <!-- C++ -->
+    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+      <img src="img/cmas.svg" alt="C++" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+      <h3 class="text-xl font-semibold text-white">C++</h3>
+      <p class="mt-2 text-white/80 text-sm">Desarrollo de algoritmos, optimización y programación orientada a objetos.</p>
     </div>
-  </section>
 
-  <!-- SOBRE MÍ -->
-  <section id="sobre-mi" class="snap">
-    <h2 class="scroll-anim">Sobre mí</h2>
-    <p class="max-w-3xl mx-auto text-lg text-center mt-6">
-      Soy desarrollador Full Stack con pasión por crear aplicaciones rápidas, escalables y visualmente atractivas.
-    </p>
-  </section>
-
-  <!-- CONTACTO -->
-  <section id="contacto" class="snap bg-gray-900">
-    <h2 class="scroll-anim">Contacto</h2>
-    <div class="flex justify-center gap-6 mt-10">
-      <a href="#" class="px-6 py-3 bg-purple-600 rounded-full hover:bg-purple-700 transition">Email</a>
-      <a href="#" target="_blank" class="px-6 py-3 bg-white/10 rounded-full hover:bg-white/20 transition">GitHub</a>
-      <a href="#" target="_blank" class="px-6 py-3 bg-white/10 rounded-full hover:bg-white/20 transition">LinkedIn</a>
+    <!-- Tailwind -->
+    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+      <img src="img/tailwind.svg" alt="Tailwind" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+      <h3 class="text-xl font-semibold text-white">Tailwind CSS</h3>
+      <p class="mt-2 text-white/80 text-sm">Diseño rápido y flexible, usando utilidades para prototipado y desarrollo de interfaces.</p>
     </div>
-  </section>
+
+    <!-- QT -->
+    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+      <img src="img/qt.svg" alt="Tailwind" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+      <h3 class="text-xl font-semibold text-white">QT Creator</h3>
+      <p class="mt-2 text-white/80 text-sm"> Dominio en Qt para el desarrollo de videojuegos y aplicaciones gráficas multiplataforma, integrando lógica, manejo de eventos y renderizado visual.</p>
+    </div>
+
+  </div>
+</section>
+
+
+    <!-- SOBRE MÍ -->
+    <section id="sobre-mi" class="snap relative z-10">
+      <h2 class="scroll-anim">Sobre mí</h2>
+      <p class="max-w-3xl mx-auto text-lg text-center mt-6">
+        Soy desarrollador Full Stack con pasión por crear aplicaciones rápidas, escalables y visualmente atractivas.
+      </p>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="relative z-10 snap">
+      <h2 class="scroll-anim">Contacto</h2>
+      <div class="flex justify-center gap-6 mt-10">
+        <a href="#" class="px-6 py-3 bg-purple-600 rounded-full hover:bg-purple-700 transition">Email</a>
+        <a href="#" target="_blank" class="px-6 py-3 bg-white/10 rounded-full hover:bg-white/20 transition">GitHub</a>
+        <a href="#" target="_blank" class="px-6 py-3 bg-white/10 rounded-full hover:bg-white/20 transition">LinkedIn</a>
+      </div>
+    </section>
+  </main>
 
   <script type="module" src="js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
 </body>
 </html>
