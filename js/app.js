@@ -84,4 +84,24 @@ AOS.init({
     once: true 
 });
 
+const slider = document.getElementById("slider");
+const container = slider.parentElement; // contenedor con overflow-hidden
+const totalSlides = slider.children.length;
+let currentIndex = 0;
+
+function showSlide(index) {
+  // Obtener el ancho actual del contenedor visible
+  const containerWidth = container.offsetWidth;
+  // Mover el slider multiplicando el índice por el ancho real en px
+  slider.style.transform = `translateX(-${index * containerWidth}px)`;
+}
+
+// resto igual que antes...
+
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % totalSlides;
+  showSlide(currentIndex);
+}, 4000);
+
+showSlide(currentIndex);
 
