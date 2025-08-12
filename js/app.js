@@ -9,12 +9,21 @@ document.querySelectorAll(".scroll-anim").forEach((header) => {
       })
 })
 
+// Menu hamburguesa
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("hidden");
+});
+
+
 
 
 tsParticles.load("tsparticles", {
   background: {
     color: {
-      value: "transparent" // Mantiene tu gradiente visible
+      value: "transparent"
      }
   },
   fpsLimit: 60,
@@ -96,7 +105,6 @@ function showSlide(index) {
   slider.style.transform = `translateX(-${index * containerWidth}px)`;
 }
 
-// resto igual que antes...
 
 setInterval(() => {
   currentIndex = (currentIndex + 1) % totalSlides;
