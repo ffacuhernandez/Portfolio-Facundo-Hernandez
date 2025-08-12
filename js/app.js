@@ -79,4 +79,9 @@ tsParticles.load("tsparticles", {
   detectRetina: true
 });
 
+AOS.init({
+    duration: 1000, // duración de la animacion
+    once: true 
+});
+
 

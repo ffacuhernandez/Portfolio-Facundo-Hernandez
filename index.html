@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   <title>Portafolio Hernandez</title>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <style>
     html {
       scroll-snap-type: y mandatory;
@@ -56,7 +53,7 @@
   <div class="progress"></div>
   <header>
       <!-- NAV -->
-      <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+      <nav class="fixed top-4 left-1/2 transform -translate-x-1/2 z-50" data-aos="fade-down">
         <div class="flex items-center gap-4 px-3 py-2 bg-white/10 backdrop-blur-md rounded-full shadow-lg border border-white/20 text-sm text-white">
           <a href="#hero" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Inicio</a>
           <a href="#proyectos" class="text-base px-4 py-2 rounded-full hover:bg-white/10 transition">Proyectos</a>
@@ -88,8 +85,8 @@
           <h1 class="text-6xl md:text-8xl font-extrabold leading-tight text-white drop-shadow-lg animate__animated animate__bounceInLeft">
             ¡Hola! Soy <span class="bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-300 bg-clip-text text-transparent">Facundo</span>
           </h1>
-          <p class="text-xl md:text-2xl mt-4 text-gray-200">Apasionado por el desarrollo y aprender cada día</p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          <p class="text-xl md:text-2xl mt-4 text-gray-200" data-aos="fade-down">Apasionado por el desarrollo y aprender cada día</p>
+          <div data-aos="fade-up" class="mt-8 flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
             <a href="#proyectos" class="px-6 py-3 bg-gradient-to-r from-purple-600 to-indigo-500 rounded-full hover:opacity-90 transition text-lg text-white shadow-lg shadow-purple-500/40">
               Ver Proyectos
             </a>
@@ -100,7 +97,7 @@
         </div>
 
         <!-- Imagen -->
-        <div class="relative p-1 rounded-[2rem] bg-gradient-to-tr from-purple-800 via-indigo-600 to-cyan-400 shadow-lg shadow-purple-500/50 hover:scale-105 transition">
+        <div data-aos="fade-left" class="relative p-1 rounded-[2rem] bg-gradient-to-tr from-purple-800 via-indigo-600 to-cyan-400 shadow-lg shadow-purple-500/50 hover:scale-105 transition">
           <img src="img/perfil.webp" alt="Foto de perfil" class="rounded-[2rem] max-w-xs md:max-w-sm shadow-lg shadow-black/40">
           <div class="absolute inset-0 rounded-[2rem] border border-white/20 pointer-events-none"></div>
         </div>
@@ -145,78 +142,167 @@
     </section>
 
     <!-- TECNOLOGÍAS -->
-<section id="tecnologias" class="relative z-10 snap py-16">
-  <h2 class="scroll-anim text-center text-4xl font-bold text-white">Tecnologías</h2>
+    <section id="tecnologias" class="relative z-10 snap py-16">
+      <h2 class="scroll-anim text-center text-4xl font-bold text-white">Tecnologías</h2>
 
-  <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6">
+      <div class="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-6" data-aos="fade-down">
     
-    <!-- HTML -->
-    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
-      <img src="img/html5.svg" alt="HTML" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
-      <h3 class="text-xl font-semibold text-white">HTML5</h3>
-      <p class="mt-2 text-white/80 text-sm">Dominio avanzado en estructura semántica y optimización web. Proyectos disponibles en mi <a href="https://github.com/tuusuario" class="text-blue-400 hover:underline">GitHub</a>.</p>
-    </div>
+        <!-- HTML -->
+        <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+          <img src="img/html5.svg" alt="HTML" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+          <h3 class="text-xl font-semibold text-white">HTML5</h3>
+          <p class="mt-2 text-white/80 text-sm">Dominio avanzado en estructura semántica y optimización web. Proyectos disponibles en mi <a href="https://github.com/tuusuario" class="text-blue-400 hover:underline">GitHub</a>.</p>
+        </div>
 
-    <!-- CSS -->
-    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
-      <img src="img/css.svg" alt="CSS" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
-      <h3 class="text-xl font-semibold text-white">CSS3</h3>
-      <p class="mt-2 text-white/80 text-sm">Estilos modernos, animaciones y responsive design. Uso extensivo en interfaces limpias y adaptables.</p>
-    </div>
+        <!-- CSS -->
+        <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+          <img src="img/css.svg" alt="CSS" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+          <h3 class="text-xl font-semibold text-white">CSS3</h3>
+          <p class="mt-2 text-white/80 text-sm">Estilos modernos, animaciones y responsive design. Uso extensivo en interfaces limpias y adaptables.</p>
+        </div>
 
-    <!-- JavaScript -->
-    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
-      <img src="img/javascript.svg" alt="JavaScript" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
-      <h3 class="text-xl font-semibold text-white">JavaScript</h3>
-      <p class="mt-2 text-white/80 text-sm">Interactividad y lógica de cliente, integrando APIs y funciones dinámicas en proyectos web.</p>
-    </div>
+        <!-- JavaScript -->
+        <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+          <img src="img/javascript.svg" alt="JavaScript" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+          <h3 class="text-xl font-semibold text-white">JavaScript</h3>
+          <p class="mt-2 text-white/80 text-sm">Interactividad y lógica de cliente, integrando APIs y funciones dinámicas en proyectos web.</p>
+        </div>
 
-    <!-- C++ -->
-    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
-      <img src="img/cmas.svg" alt="C++" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
-      <h3 class="text-xl font-semibold text-white">C++</h3>
-      <p class="mt-2 text-white/80 text-sm">Desarrollo de algoritmos, optimización y programación orientada a objetos.</p>
-    </div>
+        <!-- C++ -->
+        <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+          <img src="img/cmas.svg" alt="C++" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+          <h3 class="text-xl font-semibold text-white">C++</h3>
+          <p class="mt-2 text-white/80 text-sm">Desarrollo de algoritmos, optimización y programación orientada a objetos.</p>
+        </div>
 
-    <!-- Tailwind -->
-    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
-      <img src="img/tailwind.svg" alt="Tailwind" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
-      <h3 class="text-xl font-semibold text-white">Tailwind CSS</h3>
-      <p class="mt-2 text-white/80 text-sm">Diseño rápido y flexible, usando utilidades para prototipado y desarrollo de interfaces.</p>
-    </div>
+        <!-- Tailwind -->
+        <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+          <img src="img/tailwind.svg" alt="Tailwind" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+          <h3 class="text-xl font-semibold text-white">Tailwind CSS</h3>
+          <p class="mt-2 text-white/80 text-sm">Diseño rápido y flexible, usando utilidades para prototipado y desarrollo de interfaces.</p>
+        </div>
 
-    <!-- QT -->
-    <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
-      <img src="img/qt.svg" alt="Tailwind" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
-      <h3 class="text-xl font-semibold text-white">QT Creator</h3>
-      <p class="mt-2 text-white/80 text-sm"> Dominio en Qt para el desarrollo de videojuegos y aplicaciones gráficas multiplataforma, integrando lógica, manejo de eventos y renderizado visual.</p>
-    </div>
+        <!-- QT -->
+        <div class="group bg-white/10 rounded-2xl p-6 text-center hover:bg-white/20 transition duration-300 backdrop-blur-md">
+          <img src="img/qt.svg" alt="Tailwind" class="mx-auto w-16 h-16 mb-4 group-hover:scale-110 transition-transform duration-300">
+          <h3 class="text-xl font-semibold text-white">QT Creator</h3>
+          <p class="mt-2 text-white/80 text-sm"> Dominio en Qt para el desarrollo de videojuegos y aplicaciones gráficas multiplataforma, integrando lógica, manejo de eventos y renderizado visual.</p>
+        </div>
 
-  </div>
-</section>
+      </div>
+    </section>
 
 
     <!-- SOBRE MÍ -->
-    <section id="sobre-mi" class="snap relative z-10">
-      <h2 class="scroll-anim">Sobre mí</h2>
-      <p class="max-w-3xl mx-auto text-lg text-center mt-6">
-        Soy desarrollador Full Stack con pasión por crear aplicaciones rápidas, escalables y visualmente atractivas.
-      </p>
+    <section id="sobre-mi" class="snap relative z-10 py-16">
+      <h2 class="scroll-anim text-4xl font-bold text-center text-white">Sobre mí</h2>
+
+      <div class="max-w-5xl mx-auto mt-10 grid md:grid-cols-2 gap-10 items-center">
+        
+        <!-- Columna de texto -->
+        <div class="space-y-6 text-white">
+          <p class="text-lg leading-relaxed" data-aos="fade-down">
+            Soy <span class="font-semibold text-blue-400">desarrollador Full Stack</span> con experiencia en 
+            <span class="text-orange-400">HTML5</span>, 
+            <span class="text-blue-400">CSS3</span>, 
+            <span class="text-yellow-400">JavaScript</span>, 
+            <span class="text-cyan-400">Tailwind CSS</span>, 
+            <span class="text-green-400">Qt</span> y 
+            <span class="text-indigo-400">C++</span>.  
+            Me especializo en crear aplicaciones rápidas, escalables y visualmente atractivas.
+          </p>
+          <p class="text-lg leading-relaxed text-white/80" data-aos="fade-down">
+            Entre mis fortalezas destacan la <span class="font-medium">resolución creativa de problemas</span>,
+            la <span class="font-medium">adaptabilidad a nuevas tecnologías</span> y la <span class="font-medium">colaboración en equipo</span> para lograr soluciones de alto impacto.
+          </p>
+
+          <!-- Datos rápidos -->
+          <div class="grid grid-cols-2 gap-4 text-sm text-white/80" data-aos="fade-up">
+            <div class="bg-white/10 rounded-lg p-4 backdrop-blur-md">
+              🎯 <span class="font-medium">+3 años</span> de experiencia
+            </div>
+            <div class="bg-white/10 rounded-lg p-4 backdrop-blur-md">
+              🚀 <span class="font-medium">+5 proyectos</span> completados
+            </div>
+            <div class="bg-white/10 rounded-lg p-4 backdrop-blur-md">
+              💻 Full Stack
+            </div>
+            <div class="bg-white/10 rounded-lg p-4 backdrop-blur-md">
+              🌐 Disponible remoto
+            </div>
+          </div>
+
+          <!-- Botón CV -->
+          <a href="#" target="_blank" data-aos="fade-up"
+            class="inline-block mt-4 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-medium rounded-xl shadow-md transition duration-300">
+            📄 Descargar CV
+          </a>
+        </div>
+
+        <!-- Columna de íconos y foto -->
+        <div class="flex flex-col gap-8 items-center">
+
+          <!-- Contenedor con marco degradado -->
+          <div data-aos="fade-down" class="relative p-[3px] rounded-2xl bg-gradient-to-tr from-purple-500 via-cyan-400 to-blue-500 shadow-lg shadow-purple-700/40">
+            <div class="bg-black rounded-2xl p-1">
+              <img src="img/perfil2.webp" alt="Foto de perfil" class="w-85 h-85 object-cover rounded-xl">
+            </div>
+          </div>
+
+          <!-- Íconos -->
+          <div class="flex flex-wrap gap-4 justify-center mt-4" data-aos="fade-up">
+            <img src="img/html5.svg" alt="HTML5" class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+            <img src="img/css.svg" alt="CSS3" class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+            <img src="img/javascript.svg" alt="JavaScript" class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+            <img src="img/tailwind.svg" alt="Tailwind" class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+            <img src="img/cmas.svg" alt="C++" class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+            <img src="img/qt.svg" alt="Qt" class="w-14 h-14 hover:scale-110 transition-transform duration-300">
+          </div>
+
+        </div>
+
+      </div>
     </section>
 
+
     <!-- CONTACTO -->
-    <section id="contacto" class="relative z-10 snap">
-      <h2 class="scroll-anim">Contacto</h2>
-      <div class="flex justify-center gap-6 mt-10">
-        <a href="#" class="px-6 py-3 bg-purple-600 rounded-full hover:bg-purple-700 transition">Email</a>
+    <section id="contacto" class="relative z-10 snap min-h-screen flex flex-col items-center justify-center text-center px-6">
+  
+      <!-- Avatar -->
+      <div class="mb-6" data-aos="fade-down">
+        <img src="img/perfil.webp" alt="Mi Avatar" class="w-32 h-32 rounded-full border-4 border-purple-500 shadow-lg shadow-purple-500/50">
+      </div>
+
+      <!-- Título -->
+      <h2 class="text-5xl md:text-6xl font-bold mb-6" data-aos="fade-up">
+        💡 ¿Listo para crear algo <span class="text-yellow-400">increíble</span> juntos?
+      </h2>
+        
+      <!-- Descripción -->
+      <p class="text-lg md:text-xl max-w-2xl leading-relaxed text-white/80" data-aos="fade-up" data-aos-delay="200">
+        Actualmente estoy abierto a colaborar en proyectos, aportar ideas y sumarme a nuevos desafíos.  
+        Si tienes una propuesta, ¡me encantaría escucharla!
+      </p>
+        
+      <!-- Botones -->
+      <div class="flex flex-wrap justify-center gap-6 mt-10" data-aos="fade-up" data-aos-delay="400">
+        <a href="#" class="px-6 py-3 bg-purple-600 rounded-full hover:bg-purple-700 transition text-white shadow-lg shadow-purple-500/30">Email</a>
         <a href="#" target="_blank" class="px-6 py-3 bg-white/10 rounded-full hover:bg-white/20 transition">GitHub</a>
         <a href="#" target="_blank" class="px-6 py-3 bg-white/10 rounded-full hover:bg-white/20 transition">LinkedIn</a>
       </div>
+
+      <!-- Mensaje Final -->
+      <p class="mt-6 text-sm text-white/50 italic" data-aos="fade-in" data-aos-delay="600">
+        Las mejores ideas empiezan con un simple “Hola”.
+      </p>
     </section>
+
   </main>
 
   <script type="module" src="js/app.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </body>
 </html>
