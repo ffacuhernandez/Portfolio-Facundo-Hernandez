@@ -24,7 +24,6 @@ Diseñado para ser **responsivo**, **rápido** y con efectos visuales llamativos
 - **Motion One** → Animaciones JavaScript de alto rendimiento.
 - **tsParticles** → Efectos de partículas interactivos.
 - **AOS** → Animaciones al hacer scroll.
-- **Vanilla Tilt** → Efecto 3D tilt interactivo en imágenes y elementos.
 
 ---
 
